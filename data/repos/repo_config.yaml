@@ -1,0 +1,24 @@
+---
+name: "my-awesome-repo"
+description: "A repository created using Terraform and YAML"
+visibility: "private"
+
+features:
+  has_issues: true
+  has_projects: true
+  has_wiki: true
+  has_downloads: true
+  has_discussions: true
+
+settings:
+  allow_merge_commit: true
+  allow_squash_merge: true
+  allow_rebase_merge: true
+  allow_auto_merge: false
+  delete_branch_on_merge: true
+  auto_init: true
+
+topics:
+  - "terraform"
+  - "github"
+  - "infrastructure-as-code"
