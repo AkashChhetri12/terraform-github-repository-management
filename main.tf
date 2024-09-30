@@ -12,7 +12,7 @@ provider "github" {
 }
 
 locals {
-  repo_config = yamldecode(file("${path.module}/repo_config.yaml"))
+  repo_config = yamldecode(file("${path.module}/data/repos/repo_config.yaml"))
 }
 
 resource "github_repository" "repo" {
