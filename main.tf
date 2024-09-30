@@ -20,21 +20,18 @@ resource "github_repository" "repo" {
   description = local.repo_config.description
   visibility  = local.repo_config.visibility
 
-  dynamic "features" {
-    for_each = local.repo_config.features
-    content {
-      name    = features.key
-      enabled = features.value
-    }
-  }
+  has_issues      = local.repo_config.features.has_issues
+  has_projects    = local.repo_config.features.has_projects
+  has_wiki        = local.repo_config.features.has_wiki
+  has_downloads   = local.repo_config.features.has_downloads
+  has_discussions = local.repo_config.features.has_discussions
 
-  dynamic "settings" {
-    for_each = local.repo_config.settings
-    content {
-      name  = settings.key
-      value = settings.value
-    }
-  }
+  allow_merge_commit     = local.repo_config.settings.allow_merge_commit
+  allow_squash_merge     = local.repo_config.settings.allow_squash_merge
+  allow_rebase_merge     = local.repo_config.settings.allow_rebase_merge
+  allow_auto_merge       = local.repo_config.settings.allow_auto_merge
+  delete_branch_on_merge = local.repo_config.settings.delete_branch_on_merge
+  auto_init              = local.repo_config.settings.auto_init
 
   topics = local.repo_config.topics
 }
