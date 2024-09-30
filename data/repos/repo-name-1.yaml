@@ -1,0 +1,23 @@
+---
+repo_name: "example-repo"
+repo_description: "An example repository created with Terraform"
+repo_visibility: "private"
+
+repo_features:
+  has_issues: true
+  has_projects: true
+  has_wiki: true
+  has_downloads: true
+  has_discussions: false
+
+repo_settings:
+  allow_merge_commit: true
+  allow_squash_merge: true
+  allow_rebase_merge: true
+  allow_auto_merge: false
+  delete_branch_on_merge: true
+
+repo_topics:
+  - "terraform"
+  - "github"
+  - "devops"
